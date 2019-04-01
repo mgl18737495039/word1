@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    {% if reluat==0 %}
+        <h1>重新登陆</h1>
+        <a href="/login">返回</a>
+    {% else %}
+            <form action="/login" method="post">
+                用户名： <input type="text" name="username" />
+                密码：<input type="password" name="pwd" />
+            <input type="submit" value="deng">
+        </form>
+
+        <a href="/">返回</a>
+    {% endif %}
+
+</body>
+</html>

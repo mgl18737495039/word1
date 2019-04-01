@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>项目</h1>
+    <ul>
+    <li><a href="/addtext">添加</a></li>
+
+    {% if resault!=None %}
+         {% for name in resault  %}
+            <li><a href="/xq?name={{ name[0] }}">{{ name[0] }}</a>  <a href="/del?name={{ name[0] }}">删除</a> <a href="/xiugai?name={{ name[0] }}">修改</a></li>
+
+        {% endfor %}
+    {% endif %}
+
+        <li><a href="/">返回</a></li>
+    </ul>
+</body>
+</html>

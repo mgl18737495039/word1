@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css"/>
+    <title>Title</title>
+</head>
+<body>
+	<div>
+		<div>
+		<div>
+			<ul>
+                {% if username==None %}
+                    <li><a href="/login">登录</a></li>
+				    <li><a href="/zhuce">注册 </a></li>
+                {% else %}
+                    <li>你好</li>
+                    <li>{{ username }}</li>
+                    <li><a href="/tuichu">退出</a></li>
+                    <li><a href="/xiangmu">查看项目</a></li>
+                {% endif %}
+
+			</ul>
+		</div>
+		</div>
+	</div>
+    {% if result !=None %}
+    {% for name1 in result %}
+                    <li><a href="/xq?name={{ name1[0] }}">{{ name1[0] }}</a></li>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
